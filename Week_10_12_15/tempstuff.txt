@@ -1,0 +1,33 @@
+*
+      if(j == 0){
+        firstScore = score;
+      }
+      else if(j == 1){
+        secondScore = score;
+      }
+      else if(j == 3){
+        thirdScore = score;
+
+        if(firstScore > secondScore)
+        {
+          if(firstScore > thirdScore){
+            hiScore = firstScore;
+            if(secondScore > thirdScore){
+              loScore = thirdScore;
+            }
+            else{
+              loScore = secondScore;
+            }
+          }
+          else if(thirdScore > firstScore){
+            hiScore = thirdScore;
+            loScore = secondScore;
+          }
+        }
+        else if (thirdScore > secondScore){
+          hiScore = thirdScore;
+        }
+        else if ()
+      }
+
+*/

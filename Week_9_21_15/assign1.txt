@@ -1,0 +1,71 @@
+--Sum.java--
+What is the problem
+find the sum of 2 integers and output an integer
+input - 2 integers
+output - 1 integer
+
+Test Cases:
+
+Input       |     Expected Output   |    Program Output
+--------------------------------------------------------
+2 , 3       |     5                 |    5
+-1, 4       |     2                 |    2
+0, 1        |     1                 |    1
+-3,0        |     -3                |    -3
+-3, -10     |     -13               |    -13
+1234, 9640  |     10874             |    10874
+
+Possible Errors:
+Addition has conversion type error( wont happens since inputs are forced to int)
+Incorrect char input ( readInt will only accept ints, solving error)
+
+-----------------------------------------------------------------------------------------------------------------
+
+--Poly.java--
+What is the problem asking you to do?
+-input roots
+-figure out how to get the polynomial from those roots
+	-input: a, b, c ( integers )
+	-output : if a = 1, b = 2, c = 3, output is x^3 - 6x^2 + 11x - 6
+	-(x-a)(x-b)(x-c)
+	-hard code in your degree values
+
+Test Cases:
+
+Input(a,b,c respectively)     |     Expected Output(just the equation)     |    Program Output
+----------------------------------------------------------------------------------------------------
+1, 2, 3                       |     x^3 - 6x^2 + 11x - 6                   |    x^3 - 6x^2 + 11x - 6
+-1, 2, 3                      |     x^3 - 4x^2 + 1x - 6                    |    x^3 - 4x^2 + 1x - 6
+-1, -2, 3                     |     x^3 + 0x^2 - 7x - 6                    |    x^3 + 0x^2 - 7x - 6
+-1, -2,-3                     |     x^3 + 6x^2 + 11x + 6                   |    x^3 + 6x^2 + 11x + 6
+0, 0, 0                       |     x^3 + 0x^2 + 0x + 0                    |    x^3 + 0x^2 + 0x + 0
+
+Possible Errors:
+Zero Coefficent ( For this case, zero coefficent is allowed)
+
+--------------------------------------------------------------------------------------------------------------
+
+--Intersect.java--
+What is the problem asking you to do?
+	-Find Intersection between a line and a quadratic
+	-Input : quadratic in format y = dx^2 + fx + g,line in format y = mx + b; input d, f, g, m ,b (integers) when prompted
+	-Output : If it intersects, output 1 or 2 intersections or infinit; if it doesn't, output none
+
+Test Cases: ( 2 points, 1 point, none, infinite, none or 1 point when d = 0, none or infinite when d,f, and m are 0)
+
+Input(d,f,g,m,b respectively)   |     Expected Output(just the intersections)         |    Program Output
+-----------------------------------------------------------------------------------------------------------------
+5, -3, 2, 1, 3                  |     (1.0, 4.0),(-.2, 2.8)                           |    (1.0, 4.0),(-.2, 2.8)
+1, 0, 0, 0, 0                   |     (0.0, 0.0)                                      |    (0.0, 0.0)
+1, 0, 0, 0, -1                  |     None                                            |    None
+0, 1, 1, 1, 1                   |     Infinite Intersections                          |    Infinite Intersections
+0, 1, 2, 1, 3                   |     None                                            |    None
+0, 2, 3, 4, 5                   |     (-1.0, 1.0)                                     |    (-1.0, 1.0)
+0, 0, 1, 0, 3                   |     None                                            |    None
+0, 0, 2, 0, 2                   |     Infinite Intersections                          |    Infinite Intersections
+
+Possible Errors:
+	-If d = 0, the quadratic is a line, and the quadratic formula results in error.
+		- Use a seperate if statement to check and use intersection of line formula to find intersection
+	-If d = 0 , lines could be the same or not intersect(infinite or none solution)
+		- Check if slopes are the same and then if the y intercepts are the same
