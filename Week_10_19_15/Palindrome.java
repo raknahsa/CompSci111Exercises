@@ -1,3 +1,5 @@
+//A program which checks if a phrase is a Palindrome
+
 public class Palindrome{
   public static void main(String args[]){
       String str = IO.readString();
@@ -7,14 +9,17 @@ public class Palindrome{
   public static boolean checkPalindrome(String str){
     String s = "";
 
+
     for(int i = 0; i < str.length(); i++){
       if(str.charAt(i) != ' '){
         s = s + str.charAt(i);
       }
     }
 
-    //debugging 
+    //debugging
     //System.out.println(s);
+    s = s.toLowerCase();
+
 
     for(int i = 0; i < s.length()/2; i++){
       if(s.charAt(i) != s.charAt(s.length() - i - 1)){
