@@ -1,3 +1,8 @@
+/*
+  This is a program which asks for the channel and returns the network and then asks for the network and then
+  returns the channel. Small list of channels have been predetermined. 
+*/
+
 public class TVGuide{
   public static void main(String args[]){
     int[] channels = {11, 9, 7, 5, 4, 2};
