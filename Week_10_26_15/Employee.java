@@ -17,7 +17,6 @@ public class Employee{
   public double balance;
   public double rate;
 
-
   public Employee(int b, int r){
     balance = b;
     rate = r;
