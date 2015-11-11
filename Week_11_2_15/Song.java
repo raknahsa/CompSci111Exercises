@@ -15,7 +15,10 @@ public class Song{
   }
 
   public Song(String title, int length, String artist, String genre){
-    //fill later if you want
+    this.title = title;
+    this.artist = artist;
+    this.length = length;
+    this.genre = genre;
   }
 
   public String getTitle(){
@@ -25,6 +28,22 @@ public class Song{
   public void setTitle(String title){
     if(title != null && title.length() > 0 )
       this.title = title;
+  }
+
+  public int getLength(){
+    return this.length;
+  }
+
+  public void setLength(int length){
+    this.length = length;
+  }
+
+  public void setGenre(String genre){
+    this.genre = genre;
+  }
+
+  public String toString(){
+    return "The Song is " + title + "\n" + "Artist: " + artist + "\n" +  "Length: " + length  + " minutes" + "\n" + "Genre: " + genre;
   }
 
   //get/set
