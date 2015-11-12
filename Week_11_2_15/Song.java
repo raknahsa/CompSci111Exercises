@@ -46,6 +46,13 @@ public class Song{
     return "The Song is " + title + "\n" + "Artist: " + artist + "\n" +  "Length: " + length  + " minutes" + "\n" + "Genre: " + genre;
   }
 
+  public boolean equals(Song song){
+    if(this.title.equals(song.title) && this.artist.equals(song.artist) && this.length == song.length && this.genre.equals(song.genre))
+      return true;
+    else
+      return false;
+  }
+
   //get/set
   //toString
   //equals
