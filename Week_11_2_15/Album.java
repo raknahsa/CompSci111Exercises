@@ -55,6 +55,15 @@ public class Album{
     return true;
   }
 
+  public boolean serach(Song s){
+    for(int i = 0; i < tracks.length; i++){
+      if (tracks[i].equals(s)){
+        return true;
+      }
+    }
+    return false;
+  }
+
   /*
   Analysis for AddSong
     1. n = numberOfSongs
@@ -74,7 +83,7 @@ public class Album{
     3. BC Full, 2 operation always
        WC Anything below, full 4 operations always
        Theta = 1, runs in constant time, much better
-      
+
   */
 
 
