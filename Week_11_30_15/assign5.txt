@@ -1,0 +1,65 @@
+Assignment 5
+Anuraag Shankar
+---------------
+
+Problem 1.
+
+1. Selection Sort
+Starting Array -> M U E J R Q X B
+Pass 1. B U E J R Q X M   7 Comparisons
+Pass 2. B E U J R Q X M   6 Comparisons
+Pass 3. B E J U R Q X M   5 Comparisons
+Pass 4. B E J M R Q X U   4 Comparisons
+Pass 5. B E J M Q R X U   3 Comparisons
+Pass 6. B E J M Q R X U   2 Comparisons
+Pass 7. B E J M Q R U X   1 Comparisons
+B E J M Q R U X  is sorted, 28 total comparisons
+
+
+2. Insertion Sort
+Starting Array -> M U E J R Q X B
+Pass 1. M U E J R Q X B  1 Comparison
+Pass 2. E M U J R Q X B  2 Comparisons
+Pass 3. E J M U R Q X B  3 Comparisons
+Pass 4. E J M R U Q X B  2 Comparisons
+Pass 5. E J M Q R U X B  3 Comparisons
+Pass 6. E J M Q R U X B  1 Comparison
+Pass 7. B E J M Q R U X  7 Comparisons
+B E J M Q R U X  is sorted, 19 total comparisons
+
+
+Problem 2.
+
+a. Determine if 2 arrays contain the same elements
+
+  1. First do insertion sort on both arrays, then check if each arrays are the same(compare each respective element in a for loop and check if they are the same size).
+  2. Factors which would affect run time would include the size of the array (n).
+  3. Operation to be counted is the comparing of the elements in the for loop (The Big O of Selection Sort is already known, doesn't need to be counted).
+  4. Best Case -> 1 Comparison
+  4. Worst Case -> n Comparisons
+  5. Best Case -> After Insertion Sort, the first elements are different or the arrays are different sizes, Efficiency -> 2(n^2) + 1 or 2(depends on order of comparisons)
+  5. Worst Case -> After Insertion Sort, the arrays are the same, Efficiency -> 2(n^2) + n ... 2 n^2 for the 2 insertion sorts and n for the operations
+  6. Big O is O(n^2)  ... 2(n^2) + n -> n^2
+
+b. Counting total number characters that have a duplicate within a string (i.e. "gigi the gato" would result in 7 (g x 3 + i x 2 + t x 2)
+  1. First do insertion sort the array, then count to see if there are duplicates(gigi the gato becomes aeggghiiott, go through and count)(regex to get rid of spaces)
+  1. This can be done by going through the for loop, if (a[i] == a[i + 1] && count > 1){sum++; count++;}, else if(a[i] == a[i + 1]){ sum+= 2; count++;} else count = 1;
+  2. Factors which would affect run time would include the size of the string(n).
+  3. Operation to be counted is the comparing of the elements in the for loop (The Big O of Selection Sort is already known, doesn't need to be counted).
+  4. Best Case -> n Comparisons (if all are same, does 2 the first time, and then 1 operations for rest)
+  4. Worst Case -> 3(n - 1) Comparisons (if all are different, has to do operations each time)
+  5. Best Case -> After Insertion Sort, the characters are all the same, Efficiency -> n^2 + 1
+  5. Worst Case -> After Insertion Sort, the arrays are all different, Efficiency -> n^2 + 3n -1 ... n^2 for the 2 insertion sorts and 3n - 1for the operations
+  6. Big O is O(n^2)  ... n^2 + 3(n-1) -> n^2
+
+c. Finding an empty row in a 2-D array where empty is defined as an element with a 0 entry.
+  1. Have a nested for loop, outer loop goes through each row and inner loop checks if the entire row is empty
+  2. Factors which would affect run time would include the number of rows(n) and the number of columns(m)
+  3. Operation to be counted is the comparing of the elements in each the for loop
+  4. Best Case -> n Comparison (if the first element in each row is not 0)
+  4. Worst Case -> n x m Comparisons (if the last row has all 0s)
+  5. Best Case -> if the first element in each row is not 0, Efficiency -> n
+  5. Worst Case -> if the last row has all 0s, Efficiency -> n x m
+  6. Big O is O(n x m)
+
+-
